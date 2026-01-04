@@ -6,6 +6,8 @@
 //  updateStock - 批次更新商品庫存
 // ==========================================
 
+const { name } = require("ejs");
+
 // ==========================================
 //  取得低庫存商品清單
 // ==========================================
@@ -21,7 +23,13 @@
  *   輸出: ["mouse"]
  */
 function getLowStock(products) {
- 
+  let container = [];
+  for (var i = 0; i < products.length; i++) {
+    if(products[i].stock < 10) {
+      container.push(products[i].name);
+  }
+}
+  return container;
 }
 
 
@@ -43,7 +51,16 @@ function getLowStock(products) {
  *   結果: [{ name: "mouse", stock: 15 }]
  */
 function updateStock(products, updates) {
-  
+  var result = [];
+  for (var i = 0; i < products.length; i++) {
+   var objectName = products[i].name;
+   if(typeof updates[objectName] === "undefined") {
+    result.push ({name: products[i].name, stock: products[i].stock});
+  } else {
+    result.push ({name: products[i].name, stock: updates[objectName]});
+  }
+}
+return result;
 }
 
 
