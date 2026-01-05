@@ -44,7 +44,7 @@ function updateStock(products, updates) {
 }
 return result;
 }
-![alt text](image-1.png)
+![alt text](image-8.png)
 <!--  請撰寫時，第一句話再寫一次  -->
 
 2. a.
@@ -62,7 +62,9 @@ Ans:
     answer = 'error.html 輸出的部分';
     break;
 }
-
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
 <!--  請撰寫時，第一句話再寫一次  -->
 
 2. b.
